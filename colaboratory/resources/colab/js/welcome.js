@@ -50,7 +50,7 @@ colab.displayInitialScreen = function() {
               ' Please e-mail colab-team@google.com for support');
         console.error(response);
       } else {
-        goog.dom.classes.add(document.getElementById('step1'), 'done');
+        goog.dom.classes.add(document.getElementById('step4'), 'done');
         goog.dom.forms.setDisabled(createButton, false);
         goog.dom.forms.setDisabled(showFilesButton, false);
       }
@@ -65,7 +65,7 @@ var onClientLoad = function() {
       var createButton = document.getElementById('create-button');
       var showButton = document.getElementById('show-files-button');
 
-      goog.dom.classes.add(document.getElementById('step1'), 'done');
+      goog.dom.classes.add(document.getElementById('step4'), 'done');
       goog.dom.forms.setDisabled(createButton, false);
       goog.dom.forms.setDisabled(showButton, false);
     }

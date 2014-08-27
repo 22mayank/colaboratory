@@ -35,51 +35,76 @@
       <div id="welcome-title">Welcome to coLaboratory</div>
       <div id="welcome-content">
 
-        <div id="left" class="column" >
+        <div id="left" class="column">
           <div class="subsection">
-            <div class="subtitle">Powerful</div>
+            <div class="subtitle">About</div>
             <div class="message">
-              Analyze data using standard open source tools.
+              coLaboratory is an interactive front end for the <a href="">Jupyter</a>/
+              <a href="">IPython</a> Notebook, offering full integration with Google Drive.
             </div>
-          </div>
-
-          <div class="subsection">
-            <div class="subtitle">Interactive</div>
-            <div class="message" style="text-align: center">
-              Create rich, interactive visualizations.
-            </div>
-          </div>
-
-
-          <div class="subsection">
-            <div class="subtitle">Collaborative</div>
             <div class="message">
-              Share. Comment. Edit in Realtime.
+              Like the IPython Notebook, coLaboratory lets you create documents
+              that combine live code with narrative text, but coLaboratory allows
+              editing of documents by multiple people at once, and stores them on
+              Google Drive.
             </div>
-          </div>
-
-
-          <div class="subsection">
-            <div class="subtitle">Learn More</div>
             <div class="message">
-              Visit <a href="http://github.com/ipython/colaboratory/"> our github page</a>.
+              The coLaboratory website allows you to view and edit notebooks.
+              It also allows you to connect to an IPython kernel running on
+              your own system, so that you can execute code cells.
             </div>
           </div>
 
     </div>
 
         <div id="right" class="column" style='display:none'>
-
           <div class="subsection" id="step1">
             <div class="subtitle">
-               <span class='if-done'>&#x2713;</span>
-               Step 1: Install coLaboratory
+               Step 1: Install a IPython
+            </div>
+            <div class="message" id="ipython-install-message">
+              First, <a href="http://ipython.org/install#">install IPython 2.2</a>
+              on your local machine. Note that no other version of IPython will
+              work with coLaboratory.
+            </div>
+          </div>
+
+          <div class="subsection" id="step2">
+            <div class="subtitle">
+               Step 2: Configure IPython
+            </div>
+            <div class="message" id="certificate-message">
+              Download and run <a href="http://">**this script**</a>
+              to configure IPython and generate a self-signed SSL certificate.
+              This enables a secure connection between your local kernel and
+              our web server.
+            </div>
+          </div>
+
+          <div class="subsection" id="step3">
+            <div class="subtitle">
+               Step 3: Launch IPython
+            </div>
+            <div class="message">
+              Next start IPython on your local machine using the profile you
+              created:
+            </div>
+            <pre class="code-element"> ipython notebook --profile=colab</pre>
+            <div class="message">
+              Replace colab with the IPython profile you are using.
+            </div>
+          </div>
+
+          <div class="subsection" id="step4">
+            <div class="subtitle">
+               Step 4: Install coLaboratory
             </div>
             <div class="message if-not-done" id="install-message">
               Please click on the button below to install coLab in Google Drive.
             </div>
             <div class="message if-done" id="installed-message">
-              Congrats, you have the coLaboratory Drive application installed.
+              Congrats, you already have the coLaboratory Drive application
+              installed.
             </div>
 
             <div class="buttons if-not-done">
@@ -87,14 +112,11 @@
             </div>
           </div>
 
-          <div class="subsection" id="step2" >
+          <div class="subsection" id="step5" >
 
-            <div class="subtitle">Step 2: Open a Notebook</div>
+            <div class="subtitle">Step 5: Open a Notebook</div>
             <div class="message">
-              To run coLaboratory, you need a coLaboratory notebook and a IPython
-              backend. For more information about running an IPython backend see
-              <a href="http://github.com/jupyter/colaboratory/">
-              our github README</a>. You can click on the buttons below to either create a new notebook or
+              You can click on the buttons below to either create a new notebook or
               open an existing notebook from Google Drive.
             </div>
 
